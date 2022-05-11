@@ -11,7 +11,9 @@ function App() {
   return(
     <div className="app-outermost">
       <NavBar />
-      <Users />
+      <div className="app-second">
+        <Users />
+      </div>
     </div>
   )
 }

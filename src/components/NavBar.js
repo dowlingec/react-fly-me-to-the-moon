@@ -1,8 +1,8 @@
 function NavBar() {
     return(
-        <div>
-            <button>hello</button>
-        </div>
+        <span>
+            <p>NavBar goes here</p>
+        </span>
     )
 }
 

@@ -4,23 +4,36 @@ body {
   margin: 0px
 }
 
-.app-outermost {
-  background-color: aqua;
+span {
+  background-color: antiquewhite;
+}
+
+/* .app-outermost {
+  
+} */
+app.second {
+  display: flex;
+  flex-direction: row;
 }
 
 .user-outermost {
-  display: flex;
   background: ivory;
+  /* max-width: 100%; */
 }
 
 .user-card {
-  align-content: center;
+  /* align-content: center; */
   background-color: rosybrown;
-  width: 30%;
+  /* max-width: min-content; */
+  /* height: auto; */
   border: 5px solid black;
-  border-radius: 3%;
+  border-radius: 8%;
 }
 
- .user-card img {
-   border-radius: 50%;
- }
+.user-card:hover {
+  cursor: pointer;
+}
+
+.user-card img {
+  border-radius: 50%;
+}
