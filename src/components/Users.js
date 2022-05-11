@@ -22,13 +22,25 @@ function Users() {
     // POST REQUEST
     const handleSubmit = (e) => {
         e.preventDefault()
-        alert('BONJOUR!')
+        // alert('BONJOUR!')
         const newUser = {
             "username": username,
             "first_name": firstName,
             "last_name": lastName,
             "image_url": imageUrl
-        }
+        };
+
+        (async () => {
+            let req = await fetch(`http://localhost:9292/users`,
+            {
+              method: "POST",
+              headers: {"Content-Type" : "application/json"},
+              body : JSON.stringify(newUser)
+            }
+            )
+            let newObj = req.json()
+            console.log("new one", newObj)
+          })()
     }
 
     return (
@@ -40,10 +52,10 @@ function Users() {
         <h2>Or add a user here</h2>
         {/* <button onClick={() => alert('FEATURE COMING SOON')}>CLICK HERE</button> */}
         <form className="new-user" onSubmit={handleSubmit}>
-            <input placeholder="Username"/>
-            <input placeholder="First Name"/>
-            <input placeholder="Last Name"/>
-            <input placeholder="Avatar Image URL"/>
+            <input placeholder="Username" onChange={(e) => {setUsername(e.target.value)}}/>
+            <input placeholder="First Name" onChange={(e) => {setFirstName(e.target.value)}}/>
+            <input placeholder="Last Name" onChange={(e) => {setLastName(e.target.value)}}/>
+            <input placeholder="Add avatar Image URL" onChange={(e) => {setImageUrl(e.target.value)}} />
             <input type="submit" value="SUBMIT!"/>
         </form>
 
