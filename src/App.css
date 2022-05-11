@@ -15,8 +15,10 @@ body {
 
 .user-card {
   align-content: center;
+  background-color: rosybrown;
   width: 30%;
   border: 5px solid black;
+  border-radius: 3%;
 }
 
  .user-card img {
