@@ -1,11 +1,24 @@
 body {
   background-color: teal;
+  font-family: sans-serif;
   margin: 0px
 }
 
 .app-outermost {
   background-color: aqua;
 }
+
+.user-outermost {
+  display: flex;
+  background: ivory;
+}
+
 .user-card {
+  align-content: center;
+  width: 30%;
   border: 5px solid black;
 }
+
+ .user-card img {
+   border-radius: 50%;
+ }

@@ -1,8 +1,8 @@
 import React from 'react';
 
 import './App.css';
-import NavBar from './components/NavBar'
-import Users from './components/Users'
+import NavBar from './components/NavBar';
+import Users from './components/Users';
 
 
 
