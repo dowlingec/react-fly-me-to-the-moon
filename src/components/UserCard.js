@@ -5,9 +5,7 @@ function UserCard({user, setCurrentUser, currentUser}) {
     const handleClick = () => {
         setCurrentUser(user.id)
     }
-     console.log("Current user ID", currentUser)
-
-
+    console.log("Current user ID", currentUser)
 
     return (
         <div className="user-card" onClick={handleClick}>

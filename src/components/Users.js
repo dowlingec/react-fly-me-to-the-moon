@@ -16,10 +16,15 @@ function Users() {
     },[])
     console.log("User info", users)
     console.log("Individual user info", users[currentUser])
+    let cheeman = users.filter((e) => { return e.id === currentUser})
+
+    console.log("cheeman results", cheeman)
 
     return (
     <div className="user-outermost">
-        <h1>Click your profile to log in!</h1>
+        <div>
+            <h1>Click your profile to log in!</h1>
+        </div>
         {users.map((el)=> {
             return (<UserCard setCurrentUser={setCurrentUser} currentUser= {currentUser} user={el} key={el.id}/>)
         })}
