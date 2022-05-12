@@ -4,7 +4,7 @@ function UserCard({user}) {
     const [userId, setUserId] = useState("")
 
     const handleClick = () => {
-        setUserId(1)
+        setUserId(user.id)
     }
     console.log('Current user', userId)
 
