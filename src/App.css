@@ -12,28 +12,28 @@ span {
   
 } */
 app.second {
-  display: flex;
-  flex-direction: row;
+  background-color: antiquewhite;
 }
 
 .user-outermost {
   background: ivory;
+  display: flex;
+  justify-content: space-evenly;
   /* max-width: 100%; */
 }
 
 .user-card {
   /* align-content: center; */
   background-color: rosybrown;
-  /* max-width: min-content; */
-  /* height: auto; */
-  border: 5px solid black;
+  width: 450px;
+  border: 3px solid black;
   border-radius: 8%;
-}
-
-.user-card:hover {
-  cursor: pointer;
 }
 
 .user-card img {
   border-radius: 50%;
+}
+
+.user-card:hover {
+  cursor: pointer;
 }
