@@ -4,6 +4,7 @@ import NewUserForm from './NewUserForm';
 
 function Users() {
     const [users, setUsers] = useState([])
+    const [currentUser, setCurrentUser] = useState("")
 
     //GET REQUEST
     useEffect(()=> {
@@ -19,7 +20,7 @@ function Users() {
     <div className="user-outermost">
         <h1>Click your profile to log in!</h1>
         {users.map((el)=> {
-            return (<UserCard user={el} key={el.id}/>)
+            return (<UserCard setCurrentUser={setCurrentUser} currentUser= {currentUser} user={el} key={el.id}/>)
         })}
         <h2>Or add a user here</h2>
         {/* <button onClick={() => alert('FEATURE COMING SOON')}>CLICK HERE</button> */}
