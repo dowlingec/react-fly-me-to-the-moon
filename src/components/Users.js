@@ -16,6 +16,7 @@ function Users() {
     },[])
     console.log("User info", users)
 
+
     return (
     <div className="user-outermost">
         <h1>Click your profile to log in!</h1>
@@ -25,6 +26,7 @@ function Users() {
         <h2>Or add a user here</h2>
         {/* <button onClick={() => alert('FEATURE COMING SOON')}>CLICK HERE</button> */}
         <NewUserForm />
+        <h2>{currentUser}</h2>
 
     </div>
     )
