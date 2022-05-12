@@ -15,7 +15,7 @@ function Users() {
         })()
     },[])
     console.log("User info", users)
-
+    console.log("Individual user info", users[currentUser])
 
     return (
     <div className="user-outermost">
