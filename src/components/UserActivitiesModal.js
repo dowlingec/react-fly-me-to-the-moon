@@ -13,8 +13,8 @@ function UserActivitiesModal({activity}) {
             <p>Notes - {activity.notes}</p>
             <h3>Takes around {activity.duration} mins</h3>
             <h5>This is an {activity.location} activity.</h5>
-            <button>EDIT</button>
-            <button onClick={handleClick}>DELETE</button>
+            {/* <button>EDIT</button>
+            <button onClick={handleClick}>DELETE</button> */}
         </div>
     )
 }

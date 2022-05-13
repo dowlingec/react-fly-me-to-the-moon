@@ -9,14 +9,23 @@ function UserCard({user, setCurrentUser}) {
         setCurrentUser(user.id)
     }
 
+    const deleteClick = async () => {
+        let toDelete = user.id
+
+        console.log('TO DELETE', toDelete)
+        let req = await fetch(`http://localhost:9292/users/${toDelete}`, {
+            method: "DELETE"
+        })
+    }
 
 
     return (
-        <div className="user-card" onClick={handleClick}>
-            <img src={user.image_url} alt={'Avatar representing ' + user.username}></img>
+        <div className="user-card" >
+            <img src={user.image_url} alt={'Avatar representing ' + user.username} onClick={handleClick}></img>
             <h2>{user.username}</h2>
-            {userInfo.map((e)=>{ 
-            return (<UserActivitiesModal activity={e} key={e.id}/>)})}
+            <button onClick={deleteClick}>DELETE</button>
+            {/* {userInfo.map((e)=>{ 
+            return (<UserActivitiesModal activity={e} key={e.id}/>)})} */}
         </div>
     )
 }

@@ -8,7 +8,7 @@ function Users() {
     const [currentUser, setCurrentUser] = useState("all")
     
 
-    //GET REQUEST
+    // GET REQUEST
     // useEffect(()=> {
     //     (async ()=> {
     //         let req = await fetch(`http://localhost:9292/users/all`)
