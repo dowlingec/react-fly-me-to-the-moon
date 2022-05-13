@@ -5,7 +5,7 @@ import UserActivitiesModal from './UserActivitiesModal';
 
 function Users() {
     const [users, setUsers] = useState([])
-    const [currentUser, setCurrentUser] = useState("1")
+    const [currentUser, setCurrentUser] = useState("")
     const [userInfo, setUserInfo] = useState([])
 
     //GET REQUEST
