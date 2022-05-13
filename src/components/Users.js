@@ -23,12 +23,12 @@ function Users() {
         (async ()=> {
             let req = await fetch(`http://localhost:9292/users/${currentUser}`)
             let res = await req.json()
-            setUserInfo(res)
+            setUserInfo(res.activities)
         })()
     }, [currentUser])
 
-    let activityArray = [userInfo.activities]
-    console.log("USER ACTIVITIES", activityArray)
+    // let activityArray = [userInfo.activities]
+    console.log("USER ACTIVITIES", userInfo)
     // let singleUser = users.filter((e) => { return e.id === currentUser})
 
     // console.log("cheeman results", singleUser)
@@ -44,7 +44,7 @@ function Users() {
         <h2>Or add a user here</h2>
         <button onClick={() => alert('FEATURE COMING SOON')}>CLICK HERE</button>
         <NewUserForm />
-        {activityArray.map((e)=>{ 
+        {userInfo.map((e)=>{ 
             return (<UserActivitiesModal activity={e} key={e.id}/>)})}
 
     </div>
