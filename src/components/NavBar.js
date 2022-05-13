@@ -1,8 +1,11 @@
+import { NavLink } from "react-router-dom"
+
 function NavBar() {
     return(
-        <span>
-            <p>NavBar goes here</p>
-        </span>
+        <div>
+            <NavLink to="/" exact>About</NavLink>
+            <NavLink to="/login">User</NavLink>
+        </div>
     )
 }
 

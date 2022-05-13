@@ -1,32 +1,32 @@
 import {useState, useEffect} from 'react';
 import UserCard from './UserCard';
 import NewUserForm from './NewUserForm';
-import UserActivitiesModal from './UserActivitiesModal';
+
 
 function Users() {
     const [users, setUsers] = useState([])
-    const [currentUser, setCurrentUser] = useState("")
-    const [userInfo, setUserInfo] = useState([])
+    const [currentUser, setCurrentUser] = useState("all")
+    
 
     //GET REQUEST
-    useEffect(()=> {
-        (async ()=> {
-            let req = await fetch(`http://localhost:9292/users/all`)
-            let res = await req.json()
-            setUsers(res)
-        })()
-    },[])
-    console.log("User info", users[1])
+    // useEffect(()=> {
+    //     (async ()=> {
+    //         let req = await fetch(`http://localhost:9292/users/all`)
+    //         let res = await req.json()
+    //         setUsers(res)
+    //     })()
+    // },[])
+    // console.log("User info", users[1])
 
     // Individual get request
     useEffect(() => {
         (async ()=> {
         let req = await fetch(`http://localhost:9292/users/${currentUser}`)
         let res = await req.json()
-        setUserInfo(res.activities)
+        setUsers(res)
         })()
     }, [currentUser])
-
+    // setUserInfo(Users.activities)
     // let activityArray = [userInfo.activities]
     // console.log("USER ACTIVITIES", userInfo)
     // let singleUser = users.filter((e) => { return e.id === currentUser})
@@ -44,8 +44,6 @@ function Users() {
         <h2>Or add a user here</h2>
         <button onClick={() => alert('FEATURE COMING SOON')}>CLICK HERE</button>
         <NewUserForm />
-        {userInfo.map((e)=>{ 
-            return (<UserActivitiesModal activity={e} key={e.id}/>)})}
 
     </div>
     )

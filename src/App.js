@@ -1,8 +1,9 @@
 import React from 'react';
-
+import { Route, Switch} from "react-router-dom"
 import './App.css';
 import NavBar from './components/NavBar';
 import Users from './components/Users';
+import About from './components/About';
 
 
 
@@ -11,9 +12,14 @@ function App() {
   return(
     <div className="app-outermost">
       <NavBar />
-      <div className="app-second">
-        <Users />
-      </div>
+      <Switch>
+        <Route exact path="/">
+          <About />
+        </Route>
+        <Route exact path="/login">
+          <Users />
+        </Route>
+      </Switch>
     </div>
   )
 }
