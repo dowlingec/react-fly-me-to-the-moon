@@ -1,21 +1,11 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
-function UserActivitiesModal({currentUser}) {
-    const [userActivities, setUserActivities] = useState([])
-
-    useEffect(() => {
-        (async ()=> {
-            let req = await fetch(`http://localhost:9292/users/${currentUser}`)
-            let res = await req.json()
-            setUserActivities(res)
-        })()
-    }, [currentUser])
-
-
-    console.log("USER ACTIVITIES", userActivities.activities)
+function UserActivitiesModal({activity}) {
+    
     return (
         <div>
-            
+            <h1>{activity.name}</h1>
+            <h3>Someone kill me</h3>
         </div>
     )
 }
