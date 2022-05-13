@@ -17,8 +17,8 @@ app.second {
 
 .user-outermost {
   background: ivory;
-  display: flex;
-  justify-content: space-evenly;
+  /* display: flex;
+  justify-content: space-evenly; */
   /* max-width: 100%; */
 }
 

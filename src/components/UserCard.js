@@ -1,11 +1,10 @@
 import {useState} from 'react'
 
-function UserCard({user, setCurrentUser, currentUser}) {
+function UserCard({user, setCurrentUser}) {
 
     const handleClick = () => {
         setCurrentUser(user.id)
     }
-    console.log("Current user ID", currentUser)
 
     return (
         <div className="user-card" onClick={handleClick}>

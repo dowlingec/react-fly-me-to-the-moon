@@ -1,24 +1,25 @@
 import {useState, useEffect} from 'react';
 import UserCard from './UserCard';
 import NewUserForm from './NewUserForm';
+import UserActivitiesModal from './UserActivitiesModal';
 
 function Users() {
     const [users, setUsers] = useState([])
-    const [currentUser, setCurrentUser] = useState("")
+    const [currentUser, setCurrentUser] = useState("all")
 
     //GET REQUEST
     useEffect(()=> {
         (async ()=> {
-            let req = await fetch(`http://localhost:9292/users`)
+            let req = await fetch(`http://localhost:9292/users/all`)
             let res = await req.json()
             setUsers(res)
         })()
     },[])
     console.log("User info", users)
-    console.log("Individual user info", users[currentUser])
-    let cheeman = users.filter((e) => { return e.id === currentUser})
 
-    console.log("cheeman results", cheeman)
+    // let singleUser = users.filter((e) => { return e.id === currentUser})
+
+    // console.log("cheeman results", singleUser)
 
     return (
     <div className="user-outermost">
@@ -31,7 +32,7 @@ function Users() {
         <h2>Or add a user here</h2>
         {/* <button onClick={() => alert('FEATURE COMING SOON')}>CLICK HERE</button> */}
         <NewUserForm />
-        <h2>{currentUser}</h2>
+        <UserActivitiesModal currentUser={currentUser}/>
 
     </div>
     )
