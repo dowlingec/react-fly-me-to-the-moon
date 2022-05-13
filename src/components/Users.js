@@ -18,17 +18,17 @@ function Users() {
     },[])
     console.log("User info", users[1])
 
-    //Individual get request
+    // Individual get request
     useEffect(() => {
         (async ()=> {
-            let req = await fetch(`http://localhost:9292/users/${currentUser}`)
-            let res = await req.json()
-            setUserInfo(res.activities)
+        let req = await fetch(`http://localhost:9292/users/${currentUser}`)
+        let res = await req.json()
+        setUserInfo(res.activities)
         })()
     }, [currentUser])
 
     // let activityArray = [userInfo.activities]
-    console.log("USER ACTIVITIES", userInfo)
+    // console.log("USER ACTIVITIES", userInfo)
     // let singleUser = users.filter((e) => { return e.id === currentUser})
 
     // console.log("cheeman results", singleUser)
@@ -39,7 +39,7 @@ function Users() {
             <h1>Click your profile to log in!</h1>
         </div>
         {users.map((el)=> {
-            return (<UserCard setCurrentUser={setCurrentUser} currentUser= {currentUser} user={el} key={el.id}/>)
+            return (<UserCard setCurrentUser={setCurrentUser} user={el} key={el.id}/>)
         })}
         <h2>Or add a user here</h2>
         <button onClick={() => alert('FEATURE COMING SOON')}>CLICK HERE</button>
