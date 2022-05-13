@@ -17,9 +17,13 @@ app.second {
 
 .user-outermost {
   background: ivory;
-  /* display: flex; */
   /* justify-content: space-evenly; */
   max-width: 100%;
+}
+
+.user-card-outermost {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .user-card {
