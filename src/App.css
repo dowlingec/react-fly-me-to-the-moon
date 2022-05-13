@@ -17,20 +17,23 @@ app.second {
 
 .user-outermost {
   background: ivory;
-  /* display: flex;
-  justify-content: space-evenly; */
-  /* max-width: 100%; */
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  max-width: 100%;
 }
 
 .user-card {
-  /* align-content: center; */
   background-color: rosybrown;
-  width: 450px;
+  width: 20%;
   border: 3px solid black;
   border-radius: 8%;
+  overflow: hidden;
+  align-self: center;
 }
 
 .user-card img {
+  height: 250px;
+  width: 250px;
   border-radius: 50%;
 }
 
