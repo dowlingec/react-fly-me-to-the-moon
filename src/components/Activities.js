@@ -1,27 +1,12 @@
 // //User is ROUTED her efrom Users.js
 // //Using currentUser state to set what they see on screen
 // //array.map to pass individual acts to card
-// import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 
-function Activities() {
-//     const [activityArray, setActivityArray] = useEffect([])
+function Activities({}) {
+    
+    console.log("Hello from Activities", )
 
-//     useEffect(()=> {
-//         (async ()=> {
-//             let req = await fetch(`http://localhost:9292/activities/${currentUser}`)
-//             let res = await req.json()
-//             setActivityArray(res)
-//         })()
-//     },[])
-//     console.log("ActivityArray", activityArray)
-
-//     return (
-//         <div>
-//             {/* {activityArray.map((e)=>{ 
-//             return (<UserActivitiesModal activity={e} key={e.id}/>)})} */}
-//             <h1>We working on it</h1>
-//         </div>
-//     )
     return (
         <div>Hello, you made it!</div>
     )

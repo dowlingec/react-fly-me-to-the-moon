@@ -1,13 +1,14 @@
 import React from 'react';
-import { Route, Switch} from "react-router-dom"
+import { Route, Switch } from "react-router-dom";
 import './App.css';
 import NavBar from './components/NavBar';
 import Users from './components/Users';
 import About from './components/About';
 import Activities from './components/Activities';
-
+import {useState} from 'react';
 
 function App() {
+  
   // router switch goes here
   return(
     <div className="app-outermost">
