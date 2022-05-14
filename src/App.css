@@ -1,9 +1,13 @@
 body {
-  background-color: teal;
+  background-color: antiquewhite;
   font-family: sans-serif;
+  color: rgb(145, 114, 75);
   margin: 0px
 }
 
+h1 {
+  text-decoration: underline;
+}
 span {
   background-color: antiquewhite;
 }
@@ -13,6 +17,21 @@ span {
 } */
 app.second {
   background-color: antiquewhite;
+}
+
+.about-outermost {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5px 5px;
+}
+.about-blurb {
+
+}
+.chemical-card {
+  width: 20%;
+  background: tan;
+  border-radius: 6px;
 }
 
 .user-outermost {
@@ -29,13 +48,13 @@ app.second {
 }
 
 .user-card {
-  background-color: rosybrown;
+  background-color: rgb(244, 202, 230);
   width: 20%;
-  border: 3px solid black;
+  border: 3px solid rgb(255, 174, 208);
   border-radius: 8%;
   overflow: hidden;
   align-self: center;
-  box-shadow: 5px 3px;
+  box-shadow: 5px 3px rgb(244, 228, 208);
   margin-bottom: 5px;
 }
 

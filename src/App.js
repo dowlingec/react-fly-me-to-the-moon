@@ -13,10 +13,10 @@ function App() {
     <div className="app-outermost">
       <NavBar />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/about">
           <About />
         </Route>
-        <Route exact path="/login">
+        <Route exact path="/">
           <Users />
         </Route>
         <Route exact path="/activities">
