@@ -24,6 +24,7 @@ app.second {
 .user-card-outermost {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .user-card {
@@ -33,6 +34,7 @@ app.second {
   border-radius: 8%;
   overflow: hidden;
   align-self: center;
+  box-shadow: 10px 10px;
 }
 
 .user-card img {

@@ -8,16 +8,15 @@ function UserCard({user, setCurrentUser}) {
 
     const handleClick = () => {
         setCurrentUser(user.id)
-        alert('User deleted!')
     }
 
     const deleteClick = async () => {
         let toDelete = user.id
-
         console.log('TO DELETE', toDelete)
         let req = await fetch(`http://localhost:9292/users/${toDelete}`, {
             method: "DELETE"
         })
+        alert('User deleted!')
     }
 
 
