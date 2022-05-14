@@ -38,6 +38,7 @@ app.second {
   background: ivory;
   /* justify-content: space-evenly; */
   max-width: 100%;
+  padding: 5px
 }
 
 .user-card-outermost {

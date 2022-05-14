@@ -23,7 +23,11 @@ function Activities() {
 //         </div>
 //     )
     return (
-        <div>Hello, you made it!</div>
+        <div>
+            <h1>You made it!</h1>
+            <h3>But there are no activites here yet</h3>
+        </div>
+        
     )
 
 }
