@@ -3,7 +3,7 @@
 // //array.map to pass individual acts to card
 // import {useEffect, useState} from 'react'
 
-// function Activities() {
+function Activities() {
 //     const [activityArray, setActivityArray] = useEffect([])
 
 //     useEffect(()=> {
@@ -22,7 +22,10 @@
 //             <h1>We working on it</h1>
 //         </div>
 //     )
+    return (
+        <div>Hello, you made it!</div>
+    )
 
-// }
+}
 
-// export default Activities;
+export default Activities;

@@ -4,7 +4,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Users from './components/Users';
 import About from './components/About';
-
+import Activities from './components/Activities';
 
 
 function App() {
@@ -18,6 +18,9 @@ function App() {
         </Route>
         <Route exact path="/login">
           <Users />
+        </Route>
+        <Route exact path="/activities">
+          <Activities />
         </Route>
       </Switch>
     </div>

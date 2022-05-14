@@ -1,5 +1,6 @@
-import {useState} from 'react'
+import {useState} from 'react';
 import UserActivitiesModal from './UserActivitiesModal';
+import {NavLink} from 'react-router-dom';
 
 function UserCard({user, setCurrentUser}) {
     const userInfo = [user.activities]
@@ -7,6 +8,7 @@ function UserCard({user, setCurrentUser}) {
 
     const handleClick = () => {
         setCurrentUser(user.id)
+        alert('User deleted!')
     }
 
     const deleteClick = async () => {
@@ -20,8 +22,8 @@ function UserCard({user, setCurrentUser}) {
 
 
     return (
-        <div className="user-card" >
-            <img src={user.image_url} alt={'Avatar representing ' + user.username} onClick={handleClick}></img>
+        <div className="user-card" onClick={handleClick}>
+            <NavLink to='/activities' exact><img src={user.image_url} alt={'Avatar representing ' + user.username}></img></NavLink>
             <h2>{user.username}</h2>
             <button onClick={deleteClick}>DELETE</button>
             {/* {userInfo.map((e)=>{ 
